@@ -21,11 +21,13 @@ body {
   margin: 0 auto;
 }
 
+h1,
 h2,
 h5 {
   padding: 0.5rem 0;
   color: #001b5d;
 }
+
 .container {
   position: relative;
   max-width: 1176px !important;
@@ -154,4 +156,26 @@ h5 {
   color: white;
   border: 2px solid #ff5c4d;
   background-color: #ff5c4d;
+}
+
+.left-bar {
+  position: fixed;
+  top: 55%;
+  left: 0;
+  transform: translate(-70%);
+  background-color: lightgrey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.right-bar {
+  position: fixed;
+  top: 55%;
+  right: 0;
+  transform: translate(70%);
+  background-color: lightgrey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }

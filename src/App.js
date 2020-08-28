@@ -82,41 +82,44 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
-
-        <div className="text-center title-container">
-          <h2>Nos métiers</h2>
-          <div className="subtitle-container">
-            <h5>Nous agrégeons les meilleures technologies IT pour qu’elles puissent vous être bénéfiques au quotidien. </h5>
+      <div>
+        <div className='left-bar'></div>
+        <div className='right-bar'></div>
+        <div className="container">
+          <div className="text-center title-container">
+            <h2>Nos métiers</h2>
+            <div className="subtitle-container">
+              <h5>Nous agrégeons les meilleures technologies IT pour qu’elles puissent vous être bénéfiques au quotidien. </h5>
+            </div>
           </div>
-        </div>
 
-        <div className="main p-5">
-          {/* <img src={BlueLeft} className='blue-left-round' alt='blue' /> */}
-          <div className='blue-left-round'></div>
-          <div className="card-container">
-            <img src={BlueIllustration} className='blue-illusion' alt='blue' />
-            <img src={GreenIllustration} className='green-illusion' alt='blue' />
-            <img src={RedRountRight} className='red-righht-round' alt='blue' />
-            <div className="row">
-              {
-                items.map((item, index) => (
-                  <div className="col-sm-6 col-md-3">
-                    <Card
-                      key={index}
-                      id={item.id}
-                      active={item.active}
-                      img={item.img}
-                      title={item.title}
-                      text={item.text}
-                      buttonText={item.buttonText}
-                      onMouseEnter={this.handleMouseEnter}
-                      onMouseLeave={this.handleMoustLeave}
-                    />
+          <div className="main">
+            {/* <img src={BlueLeft} className='blue-left-round' alt='blue' /> */}
+            <div className='blue-left-round'></div>
+            <div className="card-container">
+              <img src={BlueIllustration} className='blue-illusion' alt='blue' />
+              <img src={GreenIllustration} className='green-illusion' alt='blue' />
+              <img src={RedRountRight} className='red-righht-round' alt='blue' />
+              <div className="row">
+                {
+                  items.map((item, index) => (
+                    <div className="col-sm-6 col-md-3">
+                      <Card
+                        key={index}
+                        id={item.id}
+                        active={item.active}
+                        img={item.img}
+                        title={item.title}
+                        text={item.text}
+                        buttonText={item.buttonText}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMoustLeave}
+                      />
 
-                  </div>
-                ))
-              }
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>
