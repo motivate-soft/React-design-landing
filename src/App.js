@@ -10,7 +10,6 @@ import ServiceManage from './assets/Images/service-managé.png'
 import BlueIllustration from './assets/Formes/illustration/bleu-mini.png'
 import GreenIllustration from './assets/Formes/illustration/vert-mini.png'
 import TopRightRound from './assets/Formes/angle-arrondi/saumon/4.png'
-import BlueLeft from './assets/Formes/demi-arrondi/saumon/4.png'
 
 
 const items = [
@@ -54,7 +53,6 @@ class App extends React.Component {
   }
 
   handleMouseEnter = (id) => {
-    console.log('id', id)
     const { items } = this.state
     items.map((item, index) => {
       if (item.id === id) {
@@ -68,7 +66,6 @@ class App extends React.Component {
   }
 
   handleMoustLeave = (id) => {
-    console.log('id', id)
     const { items } = this.state
     items.map((item, index) => {
       if (item.id === id) {
@@ -82,42 +79,41 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="content">
-          <div className='blue-left-bottom-round'></div>
-          <div className="container">
-            <div className="text-center title-container">
-              <h2 className="font-weight-bold mx-auto">Nos métiers</h2>
-              <div className="subtitle-container">
-                <h5>Nous agrégeons les meilleures technologies IT pour qu’elles puissent vous être bénéfiques au quotidien. </h5>
-              </div>
+        <div className='blue-left-bottom-round'></div>
+        <div className="container">
+          <div className="text-center title-container">
+            <h2 className="font-weight-bold mx-auto">Nos métiers</h2>
+            <div className="subtitle-container">
+              <h5>Nous agrégeons les meilleures technologies IT pour qu’elles puissent vous être bénéfiques au quotidien. </h5>
             </div>
-            <div className="main-block">
-              <div className="features-block">
-                <img src={BlueIllustration} className='blue-illusion' alt='blue' />
-                <img src={GreenIllustration} className='green-illusion' alt='green' />
-                <img src={TopRightRound} className='top-right-round' alt='top-right-round' />
-                <div className="row">
-                  {
-                    items.map((item, index) => (
-                      <div key={index} className="col-md-6 col-lg-3">
-                        <Card
-                          id={item.id}
-                          active={item.active}
-                          img={item.img}
-                          title={item.title}
-                          text={item.text}
-                          buttonText={item.buttonText}
-                          onMouseEnter={this.handleMouseEnter}
-                          onMouseLeave={this.handleMoustLeave}
-                        />
-                      </div>
-                    ))
-                  }
-                </div>
+          </div>
+          <div className="main-block">
+            <div className="features-block">
+              <img src={BlueIllustration} className='blue-illusion' alt='blue-illustration' />
+              <img src={GreenIllustration} className='green-illusion' alt='green-illustration' />
+              <img src={TopRightRound} className='top-right-round' alt='top-right-round' />
+              <div className="row">
+                {
+                  items.map((item, index) => (
+                    <div key={index} className="col-md-6 col-lg-3">
+                      <Card
+                        id={item.id}
+                        active={item.active}
+                        img={item.img}
+                        title={item.title}
+                        text={item.text}
+                        buttonText={item.buttonText}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseLeave={this.handleMoustLeave}
+                      />
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
         </div>
+
         <div className='left-bar'></div>
         <div className='right-bar'></div>
       </div>

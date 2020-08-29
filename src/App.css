@@ -11,6 +11,11 @@ body {
   font-family: "Gilroy";
 }
 
+.container {
+  position: relative;
+  max-width: 1176px !important;
+}
+
 .title-container {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -28,21 +33,11 @@ h5 {
   color: #001b5d;
 }
 
-.content {
-  position: relative;
-  max-width: 1300px;
-  margin: auto;
-  min-height: 90vh;
-}
-
-.container {
-  position: relative;
-  max-width: 1176px !important;
-}
-
 .main-block {
   position: relative;
+  margin: auto 0;
 }
+
 .features-block {
   position: relative;
   padding: 1.5rem;
@@ -58,12 +53,12 @@ h5 {
   color: #001b5d;
   background: white;
   background-clip: padding-box;
-  /* !importanté */
-  border: solid 3px white;
-  /* !importanté */
+  /* !important */
+  /* border: solid 3px white; */
+  /* !important */
   border-radius: 1em;
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1) !important;
-  transition: margin-top ease 0.8s;
+  transition: margin-top ease 0.8s, box-shadow ease 0.8s;
 }
 
 .gradient-box:hover {
@@ -90,7 +85,7 @@ h5 {
 }
 
 .gradient-box p {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .gradient-box img {
@@ -125,8 +120,6 @@ h5 {
 .blue-left-bottom-round {
   z-index: -10;
   position: fixed;
-  bottom: 0;
-  left: 0;
   width: 70px;
   height: 70px;
   border-radius: 0 100% 0 0;
@@ -180,32 +173,48 @@ h5 {
   .gradient-box:hover {
     margin-top: 0 !important;
   }
+  .blue-left-bottom-round {
+    bottom: 0;
+    left: 0;
+  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .gradient-box:hover {
     margin-top: 0 !important;
   }
+  .blue-left-bottom-round {
+    bottom: 0;
+    left: 0;
+  }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .gradient-box:hover {
     margin-top: -15px !important;
   }
+  .blue-left-bottom-round {
+    bottom: 0;
+    left: 0;
+  }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .gradient-box:hover {
     margin-top: -15px !important;
   }
+  .blue-left-bottom-round {
+    bottom: 0;
+    left: 0;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1300px) {
   .gradient-box:hover {
     margin-top: -15px !important;
+  }
+  .blue-left-bottom-round {
+    bottom: 30px;
+    left: calc((100% - 1300px) / 2) !important;
   }
 }
